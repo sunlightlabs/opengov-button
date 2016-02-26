@@ -1,0 +1,7 @@
+/** open gov button chrome extension styles **/
+*{margin:0; padding:0; border:0}   /** redo this for only existing elements in injected document **/
+body{background-color:#999; width:400px}  /** logo is 228px w, 400-228 = 172 /2 = 86 using pixels is not ideal...  **/
+/** width can be explicitly set via px so not ideal to use; further investigation regarding percentages should occur if max width is needed...gross fix could be to sniff viewport size, set px to size **/
+h1{font-family:Georgia, serif; text-align:center; font-size:40px}
+.sf-logotype{display:block; margin:10px auto}
+button{margin:5px auto}

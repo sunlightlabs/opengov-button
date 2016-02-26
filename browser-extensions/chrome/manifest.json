@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+
+  "name": "OpenGov Extension by the Sunlight Foundation",
+  "description": "This extension will provide users a platform for sending data regarding non-open gov data, dotgov fails, and more, related to open government, accountability, and transparency",
+  "version": "1.0",
+
+  "browser_action": {
+   "default_icon": "sunlight-foundation-circles-logo-github-icon-transparent-019.png",
+   "default_popup": "opengov-button.html"
+  },
+  "permissions": [
+   "activeTab"
+   ]
+}
