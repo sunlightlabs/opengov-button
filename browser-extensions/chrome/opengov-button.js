@@ -1,20 +1,20 @@
 document.addEventListener('DOMContentLoaded', function() {
   var checkPageButton = document.getElementById('checkPage');
   // register handler for click event on checkPage button
-  checkPageButton.addEventListener('click', function() {
-  // onclick get currently selected tab and execute some js
-    chrome.tabs.getSelected(null, function(tab) {
-      d = document;
-      var f = d.createElement('form');
-      // f.action = 'http://gtmetrix.com/analyze.html?bm';
-      f.method = 'post';
-      var i = d.createElement('input');
-      i.type = 'hidden';
-      i.name = 'url';
-      i.value = tab.url;
-      f.appendChild(i);
-      d.body.appendChild(f);
-      f.submit();
-    });
+  checkPageButton.addEventListener('click', function(event) {
+    event.preventDefault();
+    chrome.tabs.query({ // http://stackoverflow.com/questions/9444926/chrome-extension-in-tabs-doc-dont-exist-this-chrome-tabs-getselected-but-i-s
+        active: true,
+        lastFocusedWindow: true
+        }, function(tabs) {
+          var form = checkPageButton.parentNode;
+          var url_input = document.createElement('input');
+          url_input.type = 'hidden';
+          url_input.name = 'url';
+          url_input.value = tabs[0].url;
+          form.appendChild(url_input);
+          form.submit();
+        }
+    );
   }, false);
 }, false);

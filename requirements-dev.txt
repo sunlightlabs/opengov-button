@@ -1,0 +1,12 @@
+django
+django-extensions
+django-storages
+django-pipeline
+django-sass-processor
+django-localflavor
+django-debug-toolbar
+pyyaml
+python-memcached
+dj-database-url
+jsonfield
+psycopg2

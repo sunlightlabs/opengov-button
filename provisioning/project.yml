@@ -1,0 +1,36 @@
+---
+- name: Set up project
+  hosts: opengov-button
+  become: yes
+  vars:
+    configure_user: yes
+  roles:
+    - role: common-roles/common
+      hostname: opengov-button.org
+      extra_packages:
+        - libpq-dev # Need this for psycopg2
+        - memcached
+    - role: common-roles/node
+      npm_packages:
+        - yuglify
+        - uglify-js
+    - role: common-roles/ruby
+      gem_packages:
+        - sass
+    - role: roles/postgres-apt-ppa
+      distro_version_name: trusty
+      signing_key: ACCC4CF8
+    - role: common-roles/postgres
+      pgversion: 9.4
+      dbuser: "opengov-button"
+      dbpassword: "test"
+      dbname: "opengov-button"
+    - role: common-roles/django
+      python_version: 3
+      git_repositories:
+        - repo: https://github.com/sunlightlabs/opengov-button.git
+          dir: opengov-button
+          version: HEAD
+      wsgi_module: opengov_button.wsgi:application
+      serve_static: yes
+    - role: roles/opengov-button

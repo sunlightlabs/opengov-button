@@ -1,0 +1,8 @@
+---
+project_name: opengov-button
+django_settings_module: opengov_button.settings.local
+requirements: "requirements-dev.txt"
+django_environment:
+  ERROR_LOG_FILE: /projects/opengov-button/logs/django_errors.log
+  SECRET_KEY: a-bad-secret-key
+  DATABASE_URL: postgres://opengov-button:test@localhost:5432/opengov-button

@@ -1,0 +1,48 @@
+<!doctype html>{% load staticfiles %}{% load pipeline %}
+<html class="bb_wrapper">
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        {% include 'www/_head.html' %}
+    </head>
+    <body>
+        {% block brandingbar %}
+            <div class="branding-bar" data-bb-brandingbar="true" data-bb-property-id="sunlightlabs-awesome"></div>
+        {% endblock %}
+
+        {% block header %}
+            <header class="header">
+                Header
+            </header>
+        {% endblock %}
+
+        {% block main %}
+            <main class="main">
+                {% block content %}{% endblock %}
+            </main>
+        {% endblock %}
+
+        {% block footer %}
+            <footer class="footer">
+                {% include 'www/_footer.html' %}
+            </footer>
+        {% endblock %}
+
+        <!-- CDN Javascript -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <!-- Our Javascript -->
+        <script type="text/javascript">
+            var URL_PREFIX = "";
+            var csrftoken = "{{ csrf_token }}";
+
+            $.ajaxSetup({
+                beforeSend: function(xhr, settings) {
+                    if (!/^(GET|HEAD|OPTIONS|TRACE)$/i.test(settings.type) && !this.crossDomain) {
+                        xhr.setRequestHeader("X-CSRFToken", csrftoken)
+                    }
+                }
+            });
+        </script>
+        <script async type="text/javascript" src="https://sunlight-cdn.s3.amazonaws.com/brandingbar/0.4/js/brandingbar.min.js.gz"></script>
+        {% block javascript %}{% endblock %}
+    </body>
+</html>
