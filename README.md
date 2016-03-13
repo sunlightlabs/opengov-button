@@ -8,4 +8,11 @@ popup.html, and popup.js are not required in name or functionality, but cannot t
 for testing, open up chrome://extensions/ and select "Developer mode" input checkbox  
 then select "Load unpackaged extension..."  
 then navigate to the extensions directory, select and upload  
+  
+[Official Documentation](https://developer.chrome.com/extensions)  
 
+[Getting Started](https://developer.chrome.com/extensions/getstarted)
+https://developer.chrome.com/extensions/devguide  
+https://developer.chrome.com/extensions/overview  
+https://developer.chrome.com/extensions/tut_debugging  
+https://developer.chrome.com/extensions/api_index

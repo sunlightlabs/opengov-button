@@ -4,14 +4,6 @@
     <title>OpenGov Extension - Sunlight Foundation</title>
     <link href="opengov-button-chrome.css" rel="stylesheet" />
     <script src="opengov-button.js"></script>
-    
-    <script src="opengov-button2.js"></script>
-    <!--
-    Write about specific government data issues with specific ways to fix those issues, e.g. USDA Watercolors are now free.
-Report data quality issues, including: broken links, desired machine-readable formats, missing data dictionaries, removal of fees, and public domain declarations. 
-Comment on government open source projects: Govcode.org, 18F 
-Comment on government tech policy:
--->
   </head>
   <body>
     <img class="sf-logotype" src="sunlight-foundation-logotype.png" alt="Sunlight Foundation" />
@@ -19,7 +11,6 @@ Comment on government tech policy:
     <!-- Point to server address -->
     <form action="http://10.73.98.100/" method="post">
         <input id="checkPage" type="submit" value="Check this page now!">
-      <button onclick="sendData('Some data');">Send data</button>
     </form>
       <p><strong>OpenGov Button</strong> is <a href="http://sunlightfoundation.com/">a product of the Sunlight Foundation</a>.</p>
   </body>
