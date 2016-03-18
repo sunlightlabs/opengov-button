@@ -3,7 +3,11 @@
 {% block content %}
 <ul>
     {% for link in object_list %}
-        <li>{{ link.comment }}</li>
+        <li>
+          <ul>
+            <li>{{ link.url }} - {{ link.comment }} - {{ link.bucket }} - {{ link.browser_headers }}</li>
+          </ul>
+         </li>
     {% endfor %}
 </ul>
 {% endblock %}

@@ -41,7 +41,7 @@ class Link(AbstractModel):
         # add more buckets here
     )
 
-    url = models.URLField(max_length=1000)
-    browser_headers = JSONField()
-    bucket = models.CharField(choices=BUCKETS, max_length=2)
-    comment = models.CharField(max_length=8000)
+    url = models.URLField(max_length=1000, null=False, blank=False)
+    browser_headers = JSONField(blank=True, null=True)
+    bucket = models.CharField(choices=BUCKETS, max_length=2, null=False, blank=False)
+    comment = models.CharField(max_length=8000, null=True, blank=True)
