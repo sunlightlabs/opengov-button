@@ -16,4 +16,4 @@ class LinksView(ListView):
         return super().dispatch(request, *args, **kwargs)
 
     def post(self, request, *args, **kwargs):
-        return HttpResponse('works')
+        return HttpResponse('works2222')

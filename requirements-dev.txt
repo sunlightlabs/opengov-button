@@ -10,3 +10,5 @@ python-memcached
 dj-database-url
 jsonfield
 psycopg2
+uwsgi
+uwsgidecorators
