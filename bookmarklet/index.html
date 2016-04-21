@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US" class="bb_wrapper">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Open Government Button - Bookmarklet/Extension - Sunlight Foundation</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <!-- <link rel="stylesheet" type="text/css" href="normalize.css" /> -->
+    <link rel="stylesheet" type="text/css" href="opengov-button.css" />
+  </head>
+  <body>
+  	<div class="content">
+      <header><div class="branding-bar" data-bb-brandingbar="true" data-bb-property-id="sunlightlabs-awesome"></div></header>
+      <aside>
+        <h1><a id="logo" href="https://sunlightfoundation.com">Sunlight Foundation</a></h1>
+        <nav class="nav">
+          <ul>
+              <li><a href="#define-goals">Objectives and Strategy</a></li>
+  	        <li><a href="#engage-stakeholders">Engage Stakeholders</a></li>
+  	        <li><a href="#craft-policy">Craft Policy</a></li>
+  	        <li><a href="#implement">Implement</a></li>
+  	        <li><a href="#promote-work">Promote Work</a></li>
+  	        <li><a href="#blogposts">Open Data Cities</a></li>
+  	        <li><a href="#about">About</a></li>
+  	      </ul>
+  	    </nav>
+      </aside>
+  	  <div class="maincontent">
+  	  	<section id="wwc-first"><h1 id="h1-main">Bring open data to your city</h1>
+  	  	</section>
+  	  </div>
+  	</div>
+    <div id="opengov-button">
+        <button id="closeopengovbutton" type="button"></button>
+
+
+            <script src="https://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script>
+$('button#closeopengovbutton').click(function() {
+  // $(this).toggleClass('expanded').siblings('ul').slideToggle();
+  $("#opengov-button").addClass("hide");
+});
+</script>
+      javascript:(function(){ var script=document.createElement('script');script.src='opengov-button.js';document.body.appendChild(script)})();
+    </div> <!-- opengov-button -->
+  </body>
+</html>

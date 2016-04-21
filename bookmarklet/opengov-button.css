@@ -1,0 +1,24 @@
+div#opengov-button{
+    position:fixed;
+    z-index:20000;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    height:100%;
+    width:100%;
+    background:#0a0e13;
+    opacity:.8;
+}
+
+button{
+    position:absolute;
+	top:1em;
+	right:1em;
+	background-color:#fff;
+	border-radius:30px;
+	border:30px solid #fff;
+}
+
+
+.hide{display:none;}
