@@ -10,26 +10,6 @@ var openGovButtonForm = '<form>
 
 </form>
 
-<ol class="xoxo">
-  <li><strong class="li-header">Tools/Utilities</strong>
-    <ol class="ol-sub xoxo">
-      <li>Thing 1</li>
-    </ol>
-  </li>
-</ol>
-
-
-url of webpage
-
-var currentURL = '';
-
-var userOS = '';
-var userBrowser = '';
-
-// ?
-var screenShot = '';
-
-
 https://bowdenweb.com.s45373.gridserver.com/
 https://dev.bowdenweb.com.s45373.gridserver.com/
 
