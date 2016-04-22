@@ -16,12 +16,15 @@ function runScript() {
         		document.getElementsByTagName('head')[0].appendChild(jq);
         	}
 
+
+
         	var htmlSTring = "<div>\
         		This is a string.\
         		</div>";
+            var iframe = "<iframe src='http://sunlightfoundation.com/'></iframe>";
 
         	// inject opengov button content
-        	$("body").append("<div id='opengov-button'><button id='closeopengovbutton' type='button'>" + htmlSTring + "</div>");
+        	$("body").append("<div id='opengov-button'><button id='closeopengovbutton' type='button'>" + iframe + "</div>");
 
 
         	// close opengov button

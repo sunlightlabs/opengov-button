@@ -10,8 +10,8 @@ div#opengov-button{
     background:#0a0e13;
     opacity:.8;
 }
-
-button{
+/** long selectors to overcome site styles **/
+div#opengov-button button#closeopengovbutton{
     position:absolute;
 	top:1em;
 	right:1em;
