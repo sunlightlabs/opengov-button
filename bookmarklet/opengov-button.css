@@ -1,6 +1,6 @@
 div#opengov-button{
     position:fixed;
-    z-index:20000;
+    z-index:20005;
     top:0;
     left:0;
     right:0;
@@ -16,17 +16,18 @@ div#opengov-button button#closeopengovbutton{
 	top:1em;
 	right:1em;
 	background-color:#fff;
-	border-radius:30px;
-	border:30px solid #fff;
+	border-radius:20px;
+	border:20px solid #fff;
 }
 .hide{display:none;}
+/**
 div#opengov-button div#opengov-button-content{
     background-color:#fff;
     position:fixed;
     top:5em;
     width:100%;
     height:12em;
-}
+} **/
 ul{list-style-type:none;}
 /** browsers **/
 .browser{
@@ -49,3 +50,53 @@ ul.xoxo a{display:block;}
 ul.xoxo b{padding-left:1em;}
 
 
+div#opengovbuttonnavbox{
+    height:55px;
+    outline:4px dotted #fff;
+}
+nav#opengovbuttonnav{
+    margin-left:auto;
+    margin-right:auto;
+    width:300px;
+    height:100%;
+    background-color:#c0c0c0;
+}
+ul.ul-nav{}
+ul.ul-nav li{
+    float:left;
+    display:inline;
+}
+ul.ul-nav a{
+    float:left;
+    display:block;
+    margin-left:1.5em;
+}
+
+
+div#opengovbutton-tabbed-content{
+    overflow:hidden;
+    margin-left:auto;
+    margin-right:auto;
+    width:800px;
+    height:600px;
+    outline:3px solid #999;
+}
+div#opengovbutton-tabbed-content section.opengovbutton-section{}
+section.opengovbutton-section{
+    display:none; /** hide on load **/
+}
+form#form-opengov-button{}
+
+
+
+#opengovbutton-sf-logo{
+    background-image:url("sunlight-foundation-circles-icon-logo-x064.png");
+    background-position:0 0;
+    background-repeat:no-repeat;
+    width:64px;
+    height:64px;
+    text-indent:-9999px;
+    position:absolute;
+    top:10px;
+    left:10px;
+}
