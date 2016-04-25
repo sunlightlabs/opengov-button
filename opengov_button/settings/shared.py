@@ -9,15 +9,11 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
 import os
-import yaml
 import dj_database_url
+from etc import CONFIG_DICT
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
-CONFIG_DICT = yaml.load(open(os.path.join(BASE_DIR, 'etc/config.yaml'), 'r'))
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = CONFIG_DICT.get('secret-key', 'not-so-secret')
@@ -94,7 +90,7 @@ WSGI_APPLICATION = '{0}.wsgi.application'.format(DJANGO_PROJECT_NAME)
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 # https://github.com/kennethreitz/dj-database-url
 # dj_database_url allows the database to be specified in the environmental variable DATABASE_URL as a string
-DATABASES = {'default': dj_database_url.config()}
+DATABASES = {'default': dj_database_url.config(default=CONFIG_DICT['django']['database_uri'])}
 
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators

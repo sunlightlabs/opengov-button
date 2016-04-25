@@ -33,4 +33,6 @@
           version: HEAD
       wsgi_module: opengov_button.wsgi:application
       serve_static: yes
+      unversioned_files:
+        - {'src': "../etc/config.yaml", 'dest': 'etc/config.yaml'}
     - role: roles/opengov-button
