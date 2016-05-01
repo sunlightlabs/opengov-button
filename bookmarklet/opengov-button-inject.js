@@ -18,7 +18,7 @@ function runScript() {
 
             var openGovButtonNav = "<div id=\"opengovbuttonnavbox\">\
                 <nav id=\"opengovbuttonnav\">\
-                  <ul class=\"ul-nav\">\
+                  <ul class=\"ul-nav tabs\">\
                     <li><a class=\"data-link\" data-tab=\"tab-1\" href\"#form\">Form</a></li>\
                     <li><a class=\"data-link\" data-tab=\"tab-2\" href\"#tools\">Tools</a></li>\
                     <li><a class=\"data-link\" data-tab=\"tab-3\" href\"#info\">Info</a></li>\
@@ -27,23 +27,30 @@ function runScript() {
                 </nav>\
                 </div>";
 
-            var openGovButtonNavForm = "<section id=\"tab-1\" class=\"opengovbutton-section\"><form id\"form-opengov-button\">\
+            var openGovButtonNavForm = "<section id=\"tab-1\" class=\"opengovbutton-section\">\
+              <form id=\"form-opengov-button\" action=\"http://10.73.98.100/\" method=\"post\">\
                 <fieldset>\
                   <legend>OpenGov Button Form</legend>\
-                  <label for=\"\"><b class=\"block\">Label</b>\
-                    <input type=\"\" id=\"\" placeholder=\"\" validate=\"\" />\
+                  <label for=\"url\"><b class=\"block\">URL Label</b>\
+                    <input id=\"url\" name=\"url\" type=\"url\" placeholder=\"http://yourmom.com\" value=\"http://testurl.com\" />\
                   </label>\
-                  <label for=\"\"><b class=\"block\">Label</b>\
-                    <input type=\"\" id=\"\" placeholder=\"\" validate=\"\" />\
+                  <label for=\"\"><b class=\"block\">Options Label</b>\
+                    <select id=\"bucket\" name=\"bucket\">\
+                      <option value=\"B\">Not Open</option>\
+                      <option value=\"IA\">Broken</option>\
+                      <option value=\"NO\">Not Accessible</option>\
+                    </select>\
                   </label>\
-                  <label for=\"\"><b class=\"block\">Label</b>\
-                    <input type=\"\" id=\"\" placeholder=\"\" validate=\"\" />\
+                  <label for=\"browser_headers\"><b class=\"block\">UA (Browser) Headers Label</b>\
+                    <input id=\"browser_headers\" name=\"browser_headers\" type=\"text\" placeholder=\"[&#34;test&#34;]\" value=\"[&#34;test&#34;]\" />\
                   </label>\
-                  <label for=\"\"><b class=\"block\">Label</b>\
-                    <input type=\"\" id=\"\" placeholder=\"\" validate=\"\" />\
+                  <label for=\"comment\"><b class=\"block\">Comment Label</b>\
+                    <textarea id=\"comment\" type=\"text\" name=\"comment\" value=\"testcomment\" placeholder=\"testcomment\"></textarea>\
                   </label>\
                 </fieldset>\
-            </form></section>";
+                <button onclick=\"sendData('Some data');\" id=\"checkPage\" type=\"submit\" value=\"Check this page now!\">Send data</button>\
+              </form>\
+            </section>";
 
             var openGovButtonTools = "<section id=\"tab-2\" class=\"opengovbutton-section\"><h2>Tools</h2></section>";
 
@@ -98,7 +105,8 @@ function runScript() {
 
         	// close opengov button
         	$('#opengov-button').click(function() {
-        		$('#opengov-button').hide();
+        		// $('#opengov-button').hide();
+                $('#closeopengovbutton').hide();
         	});
 
             // tabs

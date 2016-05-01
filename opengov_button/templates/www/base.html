@@ -1,36 +1,68 @@
-<!doctype html>{% load staticfiles %}{% load pipeline %}
-<html class="bb_wrapper">
+<!DOCTYPE html>
+<html class="bb_wrapper" lang="en-US">
     <head>
         <title>{% block title %}{% endblock %}</title>
         {% include 'www/_head.html' %}
+<style>
+ul{
+    list-style-type:none;
+}
+footer .xoxo{}
+footer .xoxo .ul-sub{
+    padding-left:0;
+}
+.social-list li{
+    float:left;
+    display:inline;
+}
+.social-list a{
+    display:block;
+    float:left;
+    margin-left:1em;
+
+}
+.social-list b{text-indent:-9999px; display:block;}
+</style>
     </head>
     <body>
-        {% block brandingbar %}
-            <div class="branding-bar" data-bb-brandingbar="true" data-bb-property-id="sunlightlabs-awesome"></div>
-        {% endblock %}
-
         {% block header %}
-            <header class="header">
-                Header222222
+            <header role="header" class="header">
+                {% block brandingbar %}
+                    <div class="branding-bar" data-bb-brandingbar="true" data-bb-property-id="sunlightlabs-awesome"></div>
+                {% endblock %}
+                <h1>OpenGov Button Backend</h1>
             </header>
         {% endblock %}
 
         {% block main %}
-            <main class="main">
+            <main role="main" class="main">
+              <h2>Statistics</h2>
+              <table>
+                <caption>Table O Stats Caption</caption>
+                <thead><tr><th>TH 1</th><th>TH 2</th><th>TH 3</th></tr></thead>
+                <tbody>
+                  <tr><td>Row 1 Cell Data 1</td><td>Row 1 Cell Data 2</td><td>Row 1 Cell Data 3</td></tr>
+                  <tr><td>Row 2 Cell Data 1</td><td>Row 2 Cell Data 2</td><td>Row 2 Cell Data 3</td></tr>
+                  <tr><td>Row 3 Cell Data 1</td><td>Row 3 Cell Data 2</td><td>Row 3 Cell Data 3</td></tr>
+                </tbody>
+                <tfoot>
+                  <tr><td colspan="3">Table Footer Details</td></tr>
+                </tfoot>
+            </table>
+
                 {% block content %}{% endblock %}
             </main>
         {% endblock %}
 
         {% block footer %}
-            <footer class="footer">
+            <footer role="footer" class="footer">
                 {% include 'www/_footer.html' %}
             </footer>
         {% endblock %}
 
-        <!-- CDN Javascript -->
-        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-        <!-- Our Javascript -->
-        <script type="text/javascript">
+        
+        <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script><!-- CDN Javascript --> 
+        <script> // <!-- Our Javascript -->
             var URL_PREFIX = "";
             var csrftoken = "{{ csrf_token }}";
 
@@ -42,7 +74,7 @@
                 }
             });
         </script>
-        <script async type="text/javascript" src="https://sunlight-cdn.s3.amazonaws.com/brandingbar/0.4/js/brandingbar.min.js.gz"></script>
+        <script async src="https://sunlight-cdn.s3.amazonaws.com/brandingbar/0.4/js/brandingbar.min.js.gz"></script>
         {% block javascript %}{% endblock %}
     </body>
 </html>
