@@ -1,7 +1,0 @@
----
-api_keys:
-  sunlight: ""
-aws:
-  access_key_id: ''
-  secret_access_key: ''
-  storage_bucket_name: ''
