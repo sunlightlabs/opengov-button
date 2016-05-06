@@ -52,7 +52,37 @@ function runScript() {
               </form>\
             </section>";
 
-            var openGovButtonTools = "<section id=\"tab-2\" class=\"opengovbutton-section\"><h2>Tools</h2></section>";
+            var openGovButtonTools = "<section id=\"tab-2\" class=\"opengovbutton-section\">\
+                <h2>Tools</h2>\
+                <ol class=\"xoxo tools\">\
+                  <li><b class="block">Scraping</b>\
+                    <ol class=\"xoxo ol-sub\">\
+                      <li>Python</li>\
+                      <li>Xpath</li>\
+                      <li>artoo.js</li>\
+                      <li>sizzle.js</li>\
+                    </ol>\
+                  </li>\
+                  <li><b class=\"block\">Tools - In Browsah</b>\
+                    <ol class=\"xoxo ol-sub\">\
+                      <li><a href="">GeoJSON.io</a></li>\
+                      <li><a href="">GeoJSON Lint</a></li>\
+                      <li><a href="">CSV2JSON</a></li>\
+                      <li><a href="">JSON2CSV</a></li>\
+                      <li><a href="">Leaflet.js</a></li>\
+                    </ol>\
+                  </li>\
+                  <li><b class=\"block\">Dev</b>\
+                    <ol class=\"xoxo ol-sub\">
+                      <li><a href="">MDN</a></li>\
+                      <li><a href="">StackOverflow</a></li>\
+                      <li><a href="">W3C</a></li>\
+                      <li><a href="">Web Platform</a></li>\
+                      <li><a href="">QGIS</a></li>\
+                    </ol>\
+                  </li>\
+                </ol>\
+              </section>";
 
             var userDataList = "<section id=\"tab-3\" class=\"opengovbutton-section\"><ul class=\"xoxo\">\
                 <li>Browser Code: <b id=\"user-data-browser\"></b></li>\
