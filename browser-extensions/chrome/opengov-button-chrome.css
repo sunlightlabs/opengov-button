@@ -1,25 +1,43 @@
 /** open gov button chrome extension styles **/
 *{margin:0; padding:0; border:0}   /** redo this for only existing elements in injected document **/
 html{}
-body{background-color:#999; padding:1em;}  /** logo is 228px w, 400-228 = 172 /2 = 86 using pixels is not ideal...  **/
+html body,html,body{
+	width:1000px !important;
+}
+html{overflow:visible;}
+.content.opengov-button-box{
+	width:1000px;
+}
+body{background-color:#999;}  /** logo is 228px w, 400-228 = 172 /2 = 86 using pixels is not ideal...  **/
 /** width can be explicitly set via px so not ideal to use; further investigation regarding percentages should occur if max width is needed...gross fix could be to sniff viewport size, set px to size **/
-h1{font-family:Georgia, serif; text-align:center; font-size:40px}
+h1{font-family:Georgia, serif; text-align:center; font-size:40px;
+width:80%;}
 .sf-logotype{display:block; margin:10px auto}
 button{margin:5px auto}
 
-
+.block{
+	display:block;
+}
 form{
 
 }
 label,input,select,textarea,button{
 	display:block;
+	width:100%;
+	text-align:left;
+}
+label{
+	width:90%;
 	margin-left:auto;
 	margin-right:auto;
 }
-label{
-	text-align:right;
+input{
+	border:1px solid #000;
+	padding-top:1em;
+	padding-bottom:20px;
+	line-height:1.5;
+	text-indent:5px;
 }
-input{}
 select{}
 textarea{}
 button{}
