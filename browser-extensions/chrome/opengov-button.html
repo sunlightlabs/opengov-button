@@ -19,18 +19,33 @@ Comment on government tech policy:
     <h1>OpenGov Extension - Sunlight Foundation</h1>
     <!-- Point to server address -->
     <form action="http://10.73.98.100/" method="post">
-        <textarea id="comment" type="text" name="comment" value="testcomment" placeholder="testcomment"></textarea>
-        <input id="url" name="url" type="url" placeholder="http://yourmom.com" value="http://testurl.com" />
-        <select id="bucket" name="bucket">
-          <option value="B">Not Open</option>
-          <option value="IA">Broken</option>
-          <option value="NO">Not Accessible</option>
-        </select>
+      <fieldet>
+        <legend>OpenGov Button</legend>
+        <label for="url">
+          <b class="block">URL</b>
+          <input id="url" name="url" type="url" placeholder="http://yourmom.com" value="http://testurl.com" /></label>
+        <label for="bucket">
+          <b class="block">BUCKET (WAT)</b>
+          <select id="bucket" name="bucket">
+            <option value="B">Not Open</option>
+            <option value="IA">Broken</option>
+            <option value="NO">Not Accessible</option>
+          </select>
+        </label>
        <!-- <input id="bucket" name="bucket" type="text" placeholder="your mom" value="NO" /> -->
-        <input id="browser_headers" name="browser_headers" type="text" placeholder="[&#34;test&#34;]" value="[&#34;test&#34;]" />
-        <input id="checkPage" type="submit" value="Check this page now!">
-      <button onclick="sendData('Some data');">Send data</button>
+       <label for="">
+         <b class="block">Browser Headers (NEEDED?)</b>
+         <input id="browser_headers" name="browser_headers" type="text" placeholder="[&#34;test&#34;]" value="[&#34;test&#34;]" />
+       </label>
+       <label for="checkPage">
+         <b class="checkPage">Check Page</b>
+         <input id="checkPage" type="submit" value="Check this page now!" />
+       </label>
+       <label for="comment">
+         <textarea id="comment" type="text" name="comment" value="testcomment" placeholder="testcomment"></textarea></label>
+      </fieldet>
+      <button id="submit" type="submit" onclick="sendData('Some data');">Send data</button>
     </form>
-      <p><strong>OpenGov Button</strong> is <a href="http://sunlightfoundation.com/">a product of the Sunlight Foundation</a>.</p>
+    <p><strong>OpenGov Button</strong> is <a href="http://sunlightfoundation.com/">a product of the Sunlight Foundation</a>.</p>
   </body>
 </html>
