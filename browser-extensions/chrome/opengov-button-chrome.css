@@ -1,43 +1,81 @@
 /** open gov button chrome extension styles **/
-*{margin:0; padding:0; border:0}   /** redo this for only existing elements in injected document **/
-html{}
-html body,html,body{
-	width:1000px !important;
-}
-html{overflow:visible;}
-.content.opengov-button-box{
-	width:1000px;
-}
-body{background-color:#999;}  /** logo is 228px w, 400-228 = 172 /2 = 86 using pixels is not ideal...  **/
-/** width can be explicitly set via px so not ideal to use; further investigation regarding percentages should occur if max width is needed...gross fix could be to sniff viewport size, set px to size **/
-h1{font-family:Georgia, serif; text-align:center; font-size:40px;
-width:80%;}
-.sf-logotype{display:block; margin:10px auto}
-button{margin:5px auto}
 
-.block{
-	display:block;
+/** chrome extension popups have a maximum height of 600px and maximum width of 800px.   **/
+
+*{margin:0; padding:0; border:0}   /** redo this for only existing elements in injected document **/
+html{
+	width:600px;
 }
+body{
+	width:600px;
+}
+html{
+	overflow:visible;
+}
+.content.opengov-button-box{
+	width:600px;
+	box-shadow: rgba(0, 0, 0, 0.298039) 2px 2px 3px;
+}
+body{
+	background-color:#999;
+}
+/** logo is 228px w, 400-228 = 172 /2 = 86 using pixels is not ideal...  **/
+/** width can be explicitly set via px so not ideal to use; further investigation regarding percentages should occur if max width is needed...gross fix could be to sniff viewport size, set px to size **/
+.sf-logotype{
+	background-color:#fff;
+	font-family:Georgia, serif; 
+	text-align:left;
+	text-indent:1em; 
+	font-size:120%;
+	line-height:1.5;
+/** 228x68 **/  /** width:114px; **/
+	height:34px;
+	display:block;
+	padding-right:200px;
+	background:#fff url("sunlight-foundation-logotype.png") 100% 50% no-repeat;
+	margin:10px 0;
+}
+
 form{
 
 }
+fieldset{}
+legend{
+	display:none;
+}
 label,input,select,textarea,button{
-	display:block;
-	width:100%;
 	text-align:left;
 }
 label{
-	width:90%;
-	margin-left:auto;
-	margin-right:auto;
+	width:400px;
+	padding-bottom:5em;
+	margin-top:.25em;
+}
+b{display:inline-block; width:20%; text-align:right;}
+input,select,textarea{
+	display:inline-block; width:70%;
+	margin-left:3%;
+	padding:3px;
+}
+input,select,textarea{
+	border:1px solid #333;
 }
 input{
-	border:1px solid #000;
-	padding-top:1em;
-	padding-bottom:20px;
 	line-height:1.5;
 	text-indent:5px;
 }
 select{}
 textarea{}
-button{}
+button{
+	display:block;
+	margin:25px auto 5px auto;
+	padding:.25em;
+}
+
+.block{
+	display:block;
+}
+
+
+
+/** ease out animations upon completion/success! **/

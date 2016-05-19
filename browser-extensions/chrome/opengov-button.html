@@ -5,30 +5,21 @@
     <link href="opengov-button-chrome.css" rel="stylesheet" />
     <script src="jquery-2.2.3.min.js"></script>
     <script src="opengov-button.js"></script>
-    <!--
-    Write about specific government data issues with specific ways to fix those issues, e.g. USDA Watercolors are now free.
-Report data quality issues, including: broken links, desired machine-readable formats, missing data dictionaries, removal of fees, and public domain declarations. 
-Comment on government open source projects: Govcode.org, 18F 
-Comment on government tech policy:
--->
   </head>
   <body>
     <div class="content opengov-button-box">
-    <img class="sf-logotype" src="sunlight-foundation-logotype.png" alt="Sunlight Foundation" />
-    <h1>OpenGov Extension - Sunlight Foundation</h1>
-    <div id="windowsize"></div>
-    <!-- Point to server address -->
-    <form action="http://10.73.98.100/" method="post">
-      <fieldset>
-        <legend>OpenGov Button</legend>
-        <label for="url">
-          <b class="block">URL</b>
-          <input id="url" name="url" type="url" placeholder="http://yourmom.com" /></label>
-        <label for="title">
-          <b class="block">Title</b>
+      <h1 class="sf-logotype">OpenGov Extension</h1>
+      <form action="http://10.73.98.100/" method="post"> <!-- point to server address -->
+        <fieldset>
+          <legend>OpenGov Button</legend>
+          <label for="url">
+            <b>URL</b>
+            <input id="url" name="url" type="url" placeholder="http://yourmom.com" /></label>
+          <label for="title">
+          <b>Title</b>
           <input type="text" id="title" name="title" placeholder="title" /></label>
         <label for="bucket">
-          <b class="block">BUCKET (WAT)</b>
+          <b>Nopen Data?</b>
           <select id="bucket" name="bucket">
             <option value="B">Not Open</option>
             <option value="IA">Broken</option>
@@ -36,18 +27,15 @@ Comment on government tech policy:
           </select>
         </label>
        <!-- <input id="bucket" name="bucket" type="text" placeholder="your mom" value="NO" /> -->
-       <label for="browser_headers">
-         <b class="block">Browser Headers (NEEDED?)</b>
+       <!-- <label for="browser_headers">
+         <b>Browser Headers (NEEDED?)</b>
          <input id="browser_headers" name="browser_headers" type="text" placeholder="[&#34;test&#34;]" value="[&#34;test&#34;]" />
-       </label>
-       <label for="checkPage">
-         <b class="checkPage">Check Page</b>
-         <input id="checkPage" type="submit" value="Check this page now!" />
-       </label>
+       </label> -->
        <label for="comment">
+        <b>Comment</b>
          <textarea id="comment" name="comment" placeholder="testcomment"></textarea></label>
       </fieldset>
-      <button id="submit" type="submit" onclick="sendData('Some data');">Send data</button>
+      <button id="submit" type="submit" onclick="sendData('Some data');" value="Check this page now!">Send data</button>
     </form>
     <p><strong>OpenGov Button</strong> is <a href="http://sunlightfoundation.com/">a product of the Sunlight Foundation</a>.</p>
   </div>

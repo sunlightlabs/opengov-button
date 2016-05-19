@@ -6,7 +6,10 @@
   "version": "1.0",
 
   "browser_action": {
-   "default_icon": "sunlight-foundation-circles-logo-github-icon-transparent-019.png",
+    "default_icon": {
+        "19": "sunlight-foundation-circles-logo-github-icon-transparent-019.png",
+        "38": "icons/38x38.png"
+    },
    "default_popup": "opengov-button.html",
    "default_title": "Click here!"
   },

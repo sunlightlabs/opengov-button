@@ -1,13 +1,13 @@
 {% extends 'www/base.html' %}
 
 {% block content %}
-<ul>
+<table>
+  <thead><tr><th>URL</th><th>Title</th><th>Nopen Option (Bucket)</th><th>Comment</th></tr></thead>
+  <tbody>
     {% for link in object_list %}
-        <li>
-          <ul>
-            <li>{{ link.url }} - {{ link.comment }} - {{ link.bucket }} - {{ link.browser_headers }}</li>
-          </ul>
-         </li>
+        <tr><td><a href="{{ link.url }}">{{ link.url }}</a></td><td>{{ link.comment }}</td><td>{{ link.bucket }}</td><td>{{ link.comment }}</td></tr>
     {% endfor %}
-</ul>
+    </tbody>
+  <tfoot><tr><td colspan="4">Table Footer Details</td></tr></tfoot>
+</table>
 {% endblock %}
