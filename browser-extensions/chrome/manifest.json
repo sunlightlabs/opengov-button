@@ -8,10 +8,12 @@
   "browser_action": {
     "default_icon": {
         "19": "sunlight-foundation-circles-logo-github-icon-transparent-019.png",
-        "38": "icons/38x38.png"
+        "38": "sunlight-foundation-circles-logo-github-icon-transparent-038.png",
+        "64": "sunlight-foundation-circles-logo-github-icon-transparent-064.png",
+        "128": "sunlight-foundation-circles-logo-github-icon-transparent-128.png"
     },
    "default_popup": "opengov-button.html",
-   "default_title": "Click here!"
+   "default_title": "Open Up Some Government Data!"
   },
   "permissions": [
    "activeTab",
