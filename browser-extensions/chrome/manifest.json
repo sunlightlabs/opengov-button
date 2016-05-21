@@ -15,6 +15,13 @@
    "default_popup": "opengov-button.html",
    "default_title": "Open Up Some Government Data!"
   },
+    "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Alt+Shift+P"
+      }
+    }
+  },
   "permissions": [
    "activeTab",
     "https://ajax.googleapis.com/",

@@ -37,7 +37,8 @@ chrome.tabs.getSelected(null, function(tab) {
 
 
 
-
+// update tooltip...if needed
+chrome.browserAction.setTitle({title: "My New Title"});
 
 
 

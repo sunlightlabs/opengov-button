@@ -2,12 +2,12 @@
 
 {% block content %}
 <table>
-  <thead><tr><th>URL</th><th>Title</th><th>Nopen Option (Bucket)</th><th>Comment</th></tr></thead>
+  <thead><tr><th>URL</th><th>Title</th><th>Nopen Option (Bucket)</th><th>Comment</th><th>Assignee</th></tr></thead>
   <tbody>
     {% for link in object_list %}
-        <tr><td><a href="{{ link.url }}">{{ link.url }}</a></td><td>{{ link.comment }}</td><td>{{ link.bucket }}</td><td>{{ link.comment }}</td></tr>
+        <tr><td><a href="{{ link.url }}">{{ link.url }}</a></td><td>{{ link.title }}</td><td>{{ link.bucket }}</td><td>{{ link.comment }}</td><td>{{ link.assignee }}</tr>
     {% endfor %}
     </tbody>
-  <tfoot><tr><td colspan="4">Table Footer Details</td></tr></tfoot>
+  <tfoot><tr><td colspan="5">Table Footer Details</td></tr></tfoot>
 </table>
 {% endblock %}

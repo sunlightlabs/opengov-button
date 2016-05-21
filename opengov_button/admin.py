@@ -3,6 +3,6 @@ from opengov_button import models
 
 class LinkView(admin.ModelAdmin):
 
-    list_display = ['url', 'comment', 'bucket', 'browser_headers']
+    list_display = ['url', 'title', 'comment', 'bucket', 'assignee']
 
 admin.site.register(models.Link, LinkView)

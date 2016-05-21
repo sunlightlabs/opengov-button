@@ -79,3 +79,58 @@ button{
 
 
 /** ease out animations upon completion/success! **/
+
+
+
+
+/** Full page screen catpure NOTE: there are rendering bugs when styles aren't inline...  **/
+div#screencapture-body{
+	background-color:#fff;
+    font: normal 12px/16px helvetica,aria,sans-serif;
+}
+div#screencapture-body div,div#screencapture-body p { margin: 0; padding: 0; }
+.clr { overflow: hidden; }
+.left { float: left; }
+.right { float: right; }
+div#screencapture-body a {
+  color: #3681b3;
+  text-decoration: none;
+}
+div#screencapture-body a:hover { color: #265c80; }
+div#screencapture-body a:active { color: #000; }
+div#screencapture-body #wrap {
+    width: 300px;
+    padding-top: 9px;
+    font-size: 12px;
+    color: #888;
+}
+div#screencapture-body #wrap>div { display: none; }
+div#screencapture-body #wrap>#loading { display: block; }
+div#screencapture-body #loading .loader {
+    position: relative;
+    border-top: 12px dotted #000;
+    height: 9px;
+}
+div#screencapture-body #loading .bar {
+    position: absolute;
+    top: -21px;
+    left: 0;
+    height: 30px;
+    width: 0%;
+    background: #fff url(loader.gif) scroll no-repeat center right;
+}
+div#screencapture-body p { word-wrap: break-word; }
+div#screencapture-body .warning {
+    margin-top: 1em;
+    color: #aa8d3b;
+    font-style: italic;
+    font-weight: bold;
+}
+div#screencapture-body .error {
+    margin-top: 1em;
+    font-weight: bold;
+    color: #b33;
+}
+div#screencapture-body .error a {
+    color: #f75;
+}

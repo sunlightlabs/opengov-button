@@ -40,8 +40,15 @@ class Link(AbstractModel):
         ('IA', "Not Accessible"),
         # add more buckets here
     )
+    ASSIGNEES = (
+        ('Policy', 'Policy'),
+        ('Labs', 'Labs'),
+        ('Albert', 'Albert),
+    )
+
 
     url = models.URLField(max_length=1000, null=False, blank=False)
-    browser_headers = JSONField(blank=True, null=True)
+    title = models.TITLEField(max_length=1000, null=False, blank=False)
     bucket = models.CharField(choices=BUCKETS, max_length=2, null=False, blank=False)
+    assignee = models.CharField(choices=ASSIGNEES, max_length=20, null=False, blank=False)
     comment = models.CharField(max_length=8000, null=True, blank=True)
