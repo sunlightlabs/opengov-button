@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 SESSION_ENGINE = 'django.contrib.sessions.backends.cached_db'
 
 
+
 CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
