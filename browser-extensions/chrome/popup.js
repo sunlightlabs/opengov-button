@@ -246,7 +246,7 @@ function openPage(screenshotIndex) {
                        chrome.i18n.getMessage('@@extension_id') +
                        '/temporary/' + name);
         var last = screenshotIndex === screenshots.length - 1;
-
+        /*
         if (currentTab.incognito && screenshotIndex === 0) {
             // cannot access file system in incognito, so open in non-incognito
             // window and add any additional tabs to that window.
@@ -268,7 +268,7 @@ function openPage(screenshotIndex) {
                 openerTabId: currentTab.id,
                 index: (currentTab.incognito ? 0 : currentTab.index) + 1 + screenshotIndex
             });
-        }
+        }*/
 
         if (!last) {
             openPage(screenshotIndex + 1);

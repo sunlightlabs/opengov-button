@@ -21,10 +21,11 @@ class LinksView(FormView, ListView):
 
     def form_valid(self, form):
         form.save()
-        return JsonResponse({'status': 'success'})
+        return JsonResponse({'status': "Your link '{0}' has been submitted successfully. "
+                                       'Thank you for your contribution.'.format(form.data['url'])})
 
     def form_invalid(self, form):
-        return JsonResponse({'status': 'failure'})
+        return JsonResponse({'status': 'Failed to save link properly. Contact labs@sunlightfoundation.com for help.'})
 
     def post(self, request, *args, **kwargs):
         form = self.get_form()

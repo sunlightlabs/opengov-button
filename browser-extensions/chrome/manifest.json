@@ -25,6 +25,11 @@
   "permissions": [
    "activeTab",
     "https://ajax.googleapis.com/",
-    "tabs"
-  ]
+    "tabs",
+    "webRequest",
+    "background"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  }
 }

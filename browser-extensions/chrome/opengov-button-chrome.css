@@ -134,3 +134,7 @@ div#screencapture-body .error {
 div#screencapture-body .error a {
     color: #f75;
 }
+
+div#default {
+	padding:25px;
+}

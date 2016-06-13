@@ -46,4 +46,5 @@ class Link(AbstractModel):
     title = models.CharField(max_length=1000, null=False, blank=False)
     bucket = models.CharField(choices=BUCKETS, max_length=2, null=False, blank=False)
     assignee = models.ForeignKey(User, null=True)
+    req_headers = JSONField(null=True, max_length=8000)
     comment = models.CharField(max_length=8000, null=True, blank=True)

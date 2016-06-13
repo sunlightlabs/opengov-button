@@ -12,3 +12,4 @@ jsonfield
 psycopg2
 uwsgi
 uwsgidecorators
+django-cors-headers

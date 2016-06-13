@@ -38,13 +38,14 @@ INSTALLED_APPS = [
     'django_extensions',
     'storages',
     'pipeline',
+    'corsheaders',
 
     DJANGO_PROJECT_NAME,
 ]
 
 SESSION_ENGINE = 'django.contrib.sessions.backends.cached_db'
 
-
+CORS_ORIGIN_ALLOW_ALL = True
 
 CACHES = {
     'default': {
@@ -56,6 +57,7 @@ CACHES = {
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
