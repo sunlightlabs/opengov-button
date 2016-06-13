@@ -6,4 +6,4 @@ class LinkForm(ModelForm):
 
 	class Meta:
 		model = models.Link
-		fields = ['url', 'title', 'bucket', 'comment', 'req_headers']
+		fields = ['url', 'title', 'bucket', 'comment', 'req_headers', 'resp_headers']

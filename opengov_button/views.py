@@ -32,6 +32,7 @@ class LinksView(FormView, ListView):
         if form.is_valid():
             return self.form_valid(form)
         else:
+            return JsonResponse({'status': str(form.errors)})
             return self.form_invalid(form)
         # return super().post(request, *args, **kwargs)
         

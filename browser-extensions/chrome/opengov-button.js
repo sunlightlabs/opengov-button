@@ -3,11 +3,12 @@ document.addEventListener('DOMContentLoaded', function () {
     // register handler for click event on checkPage button
     // go to docs, find what you can do
     //$(window).width(chrome.tabs.width);
+    var background = chrome.extension.getBackgroundPage();
+    $('input#req_headers').val(JSON.stringify(background.req_headers));
+    $('input#resp_headers').val(JSON.stringify(background.resp_headers));
 
     $('form').submit(function (event) {
         event.preventDefault();
-        var background = chrome.extension.getBackgroundPage();
-        $('input#req_headers').val(JSON.stringify(background.req_headers));
         $.ajax({
             type: 'post',
             url: $(this).attr('action'),
